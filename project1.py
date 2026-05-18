@@ -15,7 +15,7 @@ root = Tk()
 root.title("Student Information")
 root.geometry("400x350")
 
-Label(root, text="Student search system").pack()
+Label(root, text="Student search system",font=("Arial",18,"bold")).pack()
 
 def search():
     data = entry.get()
@@ -40,13 +40,13 @@ def search():
         
 
 
-entry = Entry(root)
+entry = Entry(root, font=("Arial",14))
 entry.pack()
 
 
-Button(root, text="Search", command=search).pack()
+Button(root, text="Search", command=search,font=("Arial",12)).pack()
 
-result = Label(root, text="")
+result = Label(root, text="",font=("Arial",12),justify=LEFT)
 result.pack()
 
 
