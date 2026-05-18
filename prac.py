@@ -30,8 +30,7 @@ def search():
             )
 
             found = True
-        if found == False:
-            result.config(text="Invalid search")
+        
 
 
 
