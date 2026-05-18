@@ -4,8 +4,8 @@ from tkinter import * #এখানে *(স্টার) মানে এর �
 
 
 #ইনফরমেশন গুলো সাজাবো
-student1 = {"name":"Pavel", "roll":"265877"}
-student2 = {"name":"Saiful", "roll":"414491"}
+student1 = {"name":"Pavel", "roll":"265877","dept":"CST","shift":"2nd"}
+student2 = {"name":"Riyad", "roll":"256906","dept":"CST","shift":"2nd"}
 
 #সব ইনফরমেশন গুলো একটা ভেরিয়েবল এর মধ্যে আনব
 students = [student1,student2]
@@ -30,8 +30,10 @@ def search():
             found = True
 
             result.config(
-                text = f"Name: {student["name"]} Roll: {student["roll"]}"
+                text = f"Name: {student["name"]}\n"f"Roll: {student["roll"]}\n"f"Department: {student["dept"]}\n"f"Shift: {student["shift"]}"
             )
+
+            print(f"Student: {student["name"]}\n"f"Roll: {student["roll"]}\n"f"Department: {student["dept"]}\n"f"Shift: {student["shift"]}")
           
         if found == False:
             result.config(text=f"Result is missing")
